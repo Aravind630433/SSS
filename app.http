@@ -1,0 +1,114 @@
+API Endpoints
+
+Authentication
+
+Register a User
+
+POST /api/register
+
+Body:
+
+{
+  "username": "testuser",
+  "password": "securepassword"
+}
+
+Response:
+
+{ "message": "User registered" }
+
+
+Login
+
+POST /api/login
+
+Body:
+
+{
+  "username": "testuser",
+  "password": "securepassword"
+}
+
+Response:
+
+{ "token": "your_jwt_token" }
+
+
+
+---
+
+CRUD Operations on Items
+
+Create Item
+
+POST /api/items
+
+Headers:
+Authorization: Bearer <TOKEN>
+
+Body:
+
+{
+  "name": "Item Name",
+  "description": "Item Description"
+}
+
+Response:
+
+{ "message": "Item created", "item": { "id": 1, "name": "Item Name", "created_at": "2025-02-08T12:34:56Z" } }
+
+
+Get All Items
+
+GET /api/items
+
+Headers:
+Authorization: Bearer <TOKEN>
+
+Response:
+
+[
+  { "id": 1, "name": "Item Name", "description": "Item Description", "created_at": "2025-02-08T12:34:56Z" }
+]
+
+
+Get Single Item
+
+GET /api/items/:id
+
+Headers:
+Authorization: Bearer <TOKEN>
+
+
+Update Item
+
+PUT /api/items/:id
+
+Headers:
+Authorization: Bearer <TOKEN>
+
+Body:
+
+{
+  "name": "Updated Name",
+  "description": "Updated Description"
+}
+
+Response:
+
+{ "message": "Item updated" }
+
+
+Delete Item
+
+DELETE /api/items/:id
+
+Headers:
+Authorization: Bearer <TOKEN>
+
+Response:
+
+{ "message": "Item deleted" }
+
+
+

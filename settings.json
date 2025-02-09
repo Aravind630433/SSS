@@ -1,0 +1,40 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "PG LOCAL",
+            "database": "demo",
+            "username": "postgres",
+            "password": "2325",
+            "connectionTimeout": 30
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "PG Local",
+            "database": "demo",
+            "username": "postgres",
+            "password": "2325",
+            "connectionTimeout": 30
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "sqllocal",
+            "database": "local",
+            "username": "server",
+            "password": "YES"
+        }
+    ]
+}
